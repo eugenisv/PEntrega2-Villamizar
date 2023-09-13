@@ -13,21 +13,6 @@
     color: var(--color-black);
 }
 
-li {
-    list-style: none;
-
-}
-
-ul {
-    display: flex;
-    gap: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-black);
-}
-
 .logo {
     width: 60px;
     height: 46px;
