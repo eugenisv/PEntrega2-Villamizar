@@ -1,17 +1,6 @@
 :root {
     --color-black: #313131;
 }
-.navbar {
-    background-color: rgba(245, 245, 245, 0.50);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(25px);;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 0px 60px 0 60px;
-    color: var(--color-black);
-}
 
 .logo {
     width: 60px;
