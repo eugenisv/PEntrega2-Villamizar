@@ -3,7 +3,7 @@ const productos = [{
     nombre: "Silla",
     precio: 100,
     categoria: 'muebleria',
-    img : "#",
+    img : "./assets/silla-azul.jpg",
     stock: 10,
     descripcion: 'Buena silla para sentarse.'
 },
@@ -18,4 +18,30 @@ const productos = [{
 }]
 
 export default productos
+
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos)
+        }, 500)
+    })
+}
+
+
+export const getProductsByCategory = (category) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(productos.filter(prod => prod.categoria === category))
+        }, 500)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(productos.find(prod => prod.id === id))
+        }, 500)
+    })
+}
+
 

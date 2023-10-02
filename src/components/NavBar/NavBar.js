@@ -1,7 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css';
 import logo from './assets/Logo.png'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -17,8 +17,8 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link to={`/category/deco`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Decoración</Nav.Link>
-            <Nav.Link to={`/category/muebleria`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Mueblería</Nav.Link>
+            <Nav.Link><NavLink to={`/category/deco`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Decoración</NavLink></Nav.Link>
+            <Nav.Link><NavLink to={`/category/muebleria`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Mueblería</NavLink></Nav.Link>
             <NavDropdown title="Artículos" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Cocina</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
