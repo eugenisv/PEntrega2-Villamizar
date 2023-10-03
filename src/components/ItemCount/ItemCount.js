@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
+import './ItemCount.css'
 
 
 const ItemCount = ({inicial, stock, onAdd}) => {
@@ -19,7 +20,7 @@ const ItemCount = ({inicial, stock, onAdd}) => {
     
     return (
 
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center contador">
          <Button variant="primary" onClick={restar}>-</Button>
     <p>{contador}</p>
     <Button variant="primary" onClick={sumar}>+</Button>
