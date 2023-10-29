@@ -17,20 +17,22 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link href={`/category/deco`}>Decoración</Nav.Link>
-            <Nav.Link href={`/category/muebleria`}>Mueblería</Nav.Link>
+            <Nav.Link as={Link} to="/category/deco">Decoración</Nav.Link>
+            <Nav.Link  as={Link} to="/category/muebleria">Mueblería</Nav.Link>
             <NavDropdown title="Artículos" id="basic-nav-dropdown">
-                <NavDropdown.Item href={`/category/cocina`}>Cocina</NavDropdown.Item>
-                <NavDropdown.Item href={`/category/bano`}>Baño</NavDropdown.Item>
-                <NavDropdown.Item href={`/category/limpieza`}>Limpieza</NavDropdown.Item>
+                <NavDropdown.Item  as={Link} to="/category/cocina">Cocina</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/bano">Baño</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/limpieza">Limpieza</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href={`/category/textiles`}>Textiles</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/textiles">Textiles</NavDropdown.Item>
             </NavDropdown>
             </Nav>
         </Navbar.Collapse>
         <CartWidget/>
         </Container>
         </Navbar>
+
+        
     )
 } 
 

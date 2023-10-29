@@ -19,13 +19,23 @@ const ItemCount = ({inicial, stock, onAdd}) => {
 
     
     return (
+    <>
+        <div className="d-flex justify-content-center contador">
+            <Button variant="primary" onClick={restar}>-</Button>
+        <p>{contador}</p>
+        <Button variant="primary" onClick={sumar}>+</Button>
+        </div>
 
-    <div className="d-flex justify-content-center contador">
-         <Button variant="primary" onClick={restar}>-</Button>
-    <p>{contador}</p>
-    <Button variant="primary" onClick={sumar}>+</Button>
-    </div>
+        <div>
+        <Button variant="primary" onClick={() => onAdd(contador)} disabled={!stock}>
+                    Agregar al carrito
+                </Button>
    
+        </div>
+   
+    </>
+
+    
     )
 
     
