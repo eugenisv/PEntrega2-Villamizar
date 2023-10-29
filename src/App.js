@@ -6,9 +6,20 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {CartProvider} from './context/CartContext';
 import Cart from './components/Cart/Cart';
+// import React, { useEffect } from 'react';
+// import { db } from './services/firebase';
+// import {productos} from './components/ItemListContainer/ListadoProductos'
+// import { addDoc, collection } from 'firebase/firestore';
+
 
 
 function App() {
+  //Para cargar productos al firebase
+  // useEffect(()=> {
+  //   const coleccionProductos = collection(db, 'productos')
+  //   productos.map((item) => addDoc(coleccionProductos, item))
+  
+  // }, [])
   return (
     <div className="App">
 
