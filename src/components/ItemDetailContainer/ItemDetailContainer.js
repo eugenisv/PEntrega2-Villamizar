@@ -7,6 +7,7 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import { db} from "../../services/firebase";
 
 
+
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null)
     const {itemId} = useParams()
@@ -26,7 +27,7 @@ const ItemDetailContainer = () => {
         const collectionProd = collection(db, 'productos')
         const referenciaAlDoc = doc(collectionProd, itemId)
         getDoc(referenciaAlDoc)
-        .then((res)=> console.log(res))
+        .then((res)=> setProducto({id:res.id, ...res.data()}))
         .catch((error)=> console.log(error))
     })
     return(
